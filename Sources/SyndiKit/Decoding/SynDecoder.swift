@@ -90,7 +90,7 @@ public class SynDecoder {
   internal static func setupXMLDecoder(_ decoder: XMLDecoder) {
     decoder.keyDecodingStrategy = .convertFromSnakeCase
     decoder.dateDecodingStrategy = .custom(DateFormatterDecoder.RSS.decoder.decode(from:))
-    decoder.trimValueWhitespaces = false
+    decoder.trimValueWhitespaces = true
   }
 
   /// Returns a ``Feedable`` object of the type you specify, decoded from a JSON object.
